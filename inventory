@@ -1,0 +1,2 @@
+[all]
+testnode.ewl.example.com ansible_user=elavarde ansible_password=redhat ansible_become_password=redhat
