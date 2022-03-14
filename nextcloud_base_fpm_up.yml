@@ -62,6 +62,12 @@
         volumes_from:
         - app
         network: nw-app-db-web
+    - name: make sure firewalld is present
+      package:
+        name:
+          - firewalld
+          - python3-firewall
+        state: present
     - name: open firewall
       ansible.posix.firewalld:
         immediate: true

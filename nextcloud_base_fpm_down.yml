@@ -10,6 +10,12 @@
         permanent: true
         port: 8080/tcp
         state: disabled
+    - name: make sure firewalld is absent
+      package:
+        name:
+          - firewalld
+          - python3-firewall
+        state: absent
     - name: destroy container web
       containers.podman.podman_container:
         name: web
