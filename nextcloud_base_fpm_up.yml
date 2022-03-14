@@ -68,6 +68,11 @@
           - firewalld
           - python3-firewall
         state: present
+    - name: start and enable firewalld
+      service:
+        name: firewalld
+        state: started
+        enabled: true
     - name: open firewall
       ansible.posix.firewalld:
         immediate: true
