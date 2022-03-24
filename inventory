@@ -1,2 +1,3 @@
 [all]
-testnode.ewl.example.com ansible_user=elavarde ansible_password=redhat ansible_become_password=redhat
+# user and credentials are deemed implicit (same user, ssh-add)
+testnode.ewl.example.com

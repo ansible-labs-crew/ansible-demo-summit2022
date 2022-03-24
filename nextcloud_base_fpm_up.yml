@@ -14,6 +14,9 @@
       copy:
         src: nextcloud_nginx.conf
         dest: /srv/nextcloud_nginx.conf
+        mode: 0644
+        owner: root
+        group: root
     - name: make sure firewalld is present
       package:
         name:
